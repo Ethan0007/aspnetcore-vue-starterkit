@@ -1,0 +1,14 @@
+/Users/joevermonceda/Documents/vuecore/server/bin/Debug/netcoreapp2.2/server.deps.json
+/Users/joevermonceda/Documents/vuecore/server/bin/Debug/netcoreapp2.2/server.runtimeconfig.json
+/Users/joevermonceda/Documents/vuecore/server/bin/Debug/netcoreapp2.2/server.runtimeconfig.dev.json
+/Users/joevermonceda/Documents/vuecore/server/bin/Debug/netcoreapp2.2/server.dll
+/Users/joevermonceda/Documents/vuecore/server/bin/Debug/netcoreapp2.2/server.pdb
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.csprojAssemblyReference.cache
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.csproj.CoreCompileInputs.cache
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.RazorAssemblyInfo.cache
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.RazorAssemblyInfo.cs
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.AssemblyInfoInputs.cache
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.AssemblyInfo.cs
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.RazorTargetAssemblyInfo.cache
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.dll
+/Users/joevermonceda/Documents/vuecore/server/obj/Debug/netcoreapp2.2/server.pdb
