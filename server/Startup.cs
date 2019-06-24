@@ -1,48 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using server.Helpers;
+using server.Configurations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 
 namespace server
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+        private List<StartupConfig> Startups;
+        public Startup(IHostingEnvironment env, IConfiguration configuration)
         {
             Configuration = configuration;
+            this.BuildServiceConfigurations(env);
         }
 
-        public IConfiguration Configuration { get; }
+        private void BuildServiceConfigurations(IHostingEnvironment env)
+        {
+            Startups = new List<StartupConfig>();
+            Startups.Add(new ServiceRegistrar(env, Configuration));
+            Startups.Add(new Parsing(env, Configuration));
+            Startups.Add(new Authentication(env, Configuration));
+            Startups.Add(new ApiRouting(env, Configuration));
+    
+            // #ADD more service startup config
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddOptions();
+            foreach (var startup in Startups) startup.ConfigureServices(services);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
+            foreach (var startup in Startups) startup.Configure(app);
+            // Done configuring, clean up collection.
+
+            Startups.Clear();
         }
     }
 }
