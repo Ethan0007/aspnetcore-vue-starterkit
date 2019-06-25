@@ -25,6 +25,7 @@ namespace server
             Startups.Add(new Parsing(env, Configuration));
             Startups.Add(new Authentication(env, Configuration));
             Startups.Add(new ApiRouting(env, Configuration));
+            Startups.Add(new SpaRouting(env, Configuration));
     
             // #ADD more service startup config
         }
