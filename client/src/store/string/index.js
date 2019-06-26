@@ -22,12 +22,13 @@ export default {
       }
     }
   },
-
+  //Note: Its not a good practice to commit errors in catch callback,
+  //this is just for a demo purposes of using vuex with validation errors from server.
   actions: {
     validateString: async function({ commit }, params) {
       axios
         .post("validator/isstring", params)
-        .then(() => {commit("stringValError")})
+        .then(() => {commit("stringValError",{})})
         .catch(err => {commit("stringValError", err.response.data)});
     }
   },
