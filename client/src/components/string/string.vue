@@ -20,7 +20,7 @@
         aria-describedby="lastNameHelp"
         :placeholder="!hasMaxMin ? 'Enter Lastname' : 'Enter Lastname with (Max and Min)'"
       >
-      <small id="fnameHelp" class="form-text text-danger">{{stringValErrors.lnameError}}</small>
+      <small id="errorHelp" class="form-text text-danger">{{stringValErrors.lnameError}}</small>
     </div>
     <button type="button" class="btn btn-primary" @click="validate">Validate</button>
   </div>
