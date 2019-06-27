@@ -35,3 +35,5 @@ Webpack(Hot Module Replacement).
   ---
    #### Looking for a asynchronous modular micro-framework [Click here](https://github.com/rhaldkhein/rengine)
   ---
+  
+  Linkedin: [Joever Monceda](https://www.linkedin.com/in/joever-monceda-55242779/)
