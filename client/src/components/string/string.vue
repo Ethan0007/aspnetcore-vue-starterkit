@@ -40,10 +40,17 @@ export default {
 
   methods: {
     validate: async function() {
-      this.$store.dispatch("stringValidator/validateString", {
-        FirstName: this.firstName,
-        LastName: this.lastName
-      });
+      if (this.hasMaxMin) {
+         this.$store.dispatch("stringValidator/validateStringWithMaxMin", {
+          FirstName: this.firstName,
+          LastName: this.lastName
+        });
+      } else {
+        this.$store.dispatch("stringValidator/validateString", {
+          FirstName: this.firstName,
+          LastName: this.lastName
+        });
+      }
     }
   },
 

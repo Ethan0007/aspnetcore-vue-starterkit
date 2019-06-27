@@ -22,14 +22,19 @@
    
      
     <div class="col" style="margin-top:25px">
+      <!-- String validator -->
       <StringVal :hasMaxMin="hasMaxMin"
       v-if="selectedType == 1 || selectedType == 2" />
+      <!-- Number validator -->
+      <NumberVal v-if="selectedType == 3" />
     </div>
   </div>
 </template>
 
 <script>
 import StringVal from './string/string';
+import NumberVal from './number/number';
+
 export default {
   name: "HelloWorld",
   data() {
@@ -45,7 +50,8 @@ export default {
     }
   },
   components: {
-    StringVal
+    StringVal,
+    NumberVal
   }
 };
 </script>

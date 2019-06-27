@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios';
  
 axios.defaults.baseURL = 'http://localhost:5001/api/';
-
 Vue.config.productionTip = false
 
 new Vue({

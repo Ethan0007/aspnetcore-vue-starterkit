@@ -12,13 +12,13 @@ export default {
   mutations: {
     stringValError: async function(state, data) {
       state.stringValErrors = {};
-      if(data.payload){
+      if (data.payload) {
         data.payload.map(item => {
-            if (item.name == "firstName")
-              state.stringValErrors.fnameError = `${item.name} ${item.errors[0]}`;
-            if (item.name == "lastName")
-              state.stringValErrors.lnameError = `${item.name} ${item.errors[0]}`;
-          });
+          if (item.name == "firstName")
+            state.stringValErrors.fnameError = `${item.name} ${item.errors[0]}`;
+          if (item.name == "lastName")
+            state.stringValErrors.lnameError = `${item.name} ${item.errors[0]}`;
+        });
       }
     }
   },
@@ -27,9 +27,22 @@ export default {
   actions: {
     validateString: async function({ commit }, params) {
       axios
-        .post("validator/isstring", params)
-        .then(() => {commit("stringValError",{})})
-        .catch(err => {commit("stringValError", err.response.data)});
+        .post("validator/isString", params)
+        .then(() => {
+          commit("stringValError", {});
+        })
+        .catch(err => {
+          commit("stringValError", err.response.data);
+        });
+    },
+
+    validateStringWithMaxMin: async function({ commit }, params) {
+      axios
+        .post("validator/IsStringWithMinMax", params)
+        .then(() => {
+          commit("stringValError", {});
+        })
+        .catch(err => commit("stringValError", err.response.data));
     }
   },
   modules: {}
