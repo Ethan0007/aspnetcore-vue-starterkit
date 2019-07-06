@@ -23,6 +23,25 @@ namespace server.Helpers.Validation
                 Errors.Add("Must be a valid email");
             return this;
         }
+        
+        public StringProperty MatchRegex(string str, string msg = "Must match with pattern")
+        {
+            if (!Validate) return this;
+            Regex rgx = new Regex(str);
+            if (Value == null || !rgx.IsMatch(Value))
+                Errors.Add(msg);
+            return this;
+        }
+
+        public StringProperty IsAlphaNumeric(string msg = "Must contain letter and number")
+        {
+            return this.MatchRegex(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{0,}$", msg);
+        }
+
+        public StringProperty IsAlphaNumericSymbol(string msg = "Must contain letter, number and special character")
+        {
+            return this.MatchRegex(@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{0,}$", msg);
+        }
 
         public StringProperty Length(int min, int max)
         {
