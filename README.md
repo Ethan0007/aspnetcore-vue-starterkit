@@ -39,5 +39,5 @@ Webpack(Hot Module Replacement).
 
   Linkedin: [Joever Monceda](https://www.linkedin.com/in/joever-monceda-55242779/)  
   Medium: [Joever Monceda](https://medium.com/@joever.monceda/new-net-core-vuejs-vuex-router-webpack-starter-kit-e94b6fdb7481)  
-  Twitter [@_EthanHunt07](https://twitter.com/_EthanHunt07)
+  Twitter [@_EthanHunt07](https://twitter.com/_EthanHunt07)  
   Facebook: [Ethan Hunt](https://m.facebook.com/groups/215192935559397?view=permalink&id=688430418235644)
