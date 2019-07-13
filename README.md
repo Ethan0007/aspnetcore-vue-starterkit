@@ -36,4 +36,5 @@ Webpack(Hot Module Replacement).
    #### Looking for a asynchronous modular micro-framework [Click here](https://github.com/rhaldkhein/rengine)
   ---
   
-  Linkedin: [Joever Monceda](https://www.linkedin.com/in/joever-monceda-55242779/)
+  Linkedin: [Joever Monceda](https://www.linkedin.com/in/joever-monceda-55242779/)  
+  Medium: [Joever Monceda](https://medium.com/@joever.monceda/new-net-core-vuejs-vuex-router-webpack-starter-kit-e94b6fdb7481)
