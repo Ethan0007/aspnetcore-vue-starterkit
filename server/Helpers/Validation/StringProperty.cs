@@ -40,7 +40,7 @@ namespace server.Helpers.Validation
 
         public StringProperty IsAlphaNumericSymbol(string msg = "Must contain letter, number and special character")
         {
-            return this.MatchRegex(@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{0,}$", msg);
+            return this.MatchRegex(@"^(?=(.*\d){1})(?=.*[a-zA-Z])(?=.*[^a-zA-Z\d]).{0,}$", msg); 
         }
 
         public StringProperty Length(int min, int max)
