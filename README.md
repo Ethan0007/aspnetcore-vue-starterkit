@@ -31,10 +31,14 @@ Webpack(Hot Module Replacement).
    
    # Want to Contribute?  
    Ever tired of getting bugs yet too difficult to solve? Worry no more, create an issue (just make sure it isn’t an existing one) and i will do my best to fix it. Great ideas are welcome too; just make an issue with the Proposal or a PR from your Fork.
-   
+
   ---
    #### Looking for a asynchronous modular micro-framework [Reser](https://github.com/rhaldkhein/reser) by [RhaldKhein](https://github.com/rhaldkhein/)
   ---
+  
+  # License 
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+  Copyright (c) 2019 [Joever Monceda](https://github.com/Ethan0007)
 
 
   Linkedin: [Joever Monceda](https://www.linkedin.com/in/joever-monceda-55242779/)  
