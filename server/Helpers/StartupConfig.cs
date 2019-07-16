@@ -1,12 +1,17 @@
+/**
+ * License: MIT
+ * Author: Kevin Villanueva
+ * Contact: https://github.com/rhaldkhein
+ */
+
 using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace server.Helpers
-{
-    public class StartupConfig : IStartup {
+namespace server.Helpers {
+  public class StartupConfig : IStartup {
 
     protected readonly IHostingEnvironment Env;
     protected readonly IConfiguration Config;
@@ -25,5 +30,5 @@ namespace server.Helpers
     }
 
   }
-    
+
 }
