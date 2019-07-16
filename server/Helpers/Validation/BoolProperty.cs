@@ -1,8 +1,12 @@
-namespace server.Helpers.Validation
-{
-    public class BoolProperty : Property
-    {
-        
+/**
+ * License: MIT
+ * Author: Kevin Villanueva
+ * Contact: https://github.com/rhaldkhein
+ */
+
+namespace server.Helpers.Validation {
+  public class BoolProperty : Property {
+
     protected bool? Value;
 
     public BoolProperty(bool? val, string name, bool required) : base(name, required) {
@@ -24,5 +28,5 @@ namespace server.Helpers.Validation
         Errors.Add($"Must be false");
       return this;
     }
-    }
+  }
 }

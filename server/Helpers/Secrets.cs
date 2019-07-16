@@ -1,10 +1,16 @@
+/**
+ * License: MIT
+ * Author: Kevin Villanueva
+ * Contact: https://github.com/rhaldkhein
+ */
+
 using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Primitives;
 
-namespace server.Helpers
-{ public class Secrets : IConfiguration {
+namespace server.Helpers {
+  public class Secrets : IConfiguration {
 
     public string this[string key] {
       get => throw new System.NotImplementedException();

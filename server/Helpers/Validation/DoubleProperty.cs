@@ -1,6 +1,11 @@
-namespace server.Helpers.Validation
-{
-    public class DoubleProperty: Property {
+/**
+ * License: MIT
+ * Author: Kevin Villanueva
+ * Contact: https://github.com/rhaldkhein
+ */
+
+namespace server.Helpers.Validation {
+  public class DoubleProperty : Property {
     protected double? Value;
     public DoubleProperty(double? val, string name, bool required) : base(name, required) {
       Value = val;
@@ -25,5 +30,5 @@ namespace server.Helpers.Validation
         Errors.Add($"Must be {max} or below");
       return this;
     }
-  } 
+  }
 }

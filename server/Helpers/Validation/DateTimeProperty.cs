@@ -1,8 +1,13 @@
+/**
+ * License: MIT
+ * Author: Kevin Villanueva
+ * Contact: https://github.com/rhaldkhein
+ */
+
 using System;
 
-namespace server.Helpers.Validation
-{
-    public class DateTimeProperty : Property {
+namespace server.Helpers.Validation {
+  public class DateTimeProperty : Property {
 
 
     protected DateTime? Value;
@@ -30,5 +35,5 @@ namespace server.Helpers.Validation
         Errors.Add($"Must be {max} or below");
       return this;
     }
-  }   
+  }
 }

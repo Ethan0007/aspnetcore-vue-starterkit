@@ -1,5 +1,10 @@
-namespace server.Helpers.Errors
-{ 
+/**
+ * License: MIT
+ * Author: Kevin Villanueva
+ * Contact: https://github.com/rhaldkhein
+ */
+
+namespace server.Helpers.Errors {
 
   // 400 error types
   public class BadRequest : Error {
