@@ -37,7 +37,7 @@ Webpack(Hot Module Replacement).
   ---
   
   # License 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   Copyright (c) 2019 [Joever Monceda](https://github.com/Ethan0007)
 
 
